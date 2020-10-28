@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housepricesadvancedregressiontechniques</title>
+    <style>
+      textarea.textarea-autosize.form-control-lg{
+        height:20px;}
+    </style>
+    <link rel="stylesheet" href="{{url_for('static', filename='./css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  </head>
+
+  <body>
+    <div class="container" style="border-radius:0;">
+      <div class="page-header bg-info text-center">
+        <h2 class="font-weight-bold" style="margin-top:0rem;">House Prices</h2>
+        <h3>Advanced Regression Techniques</h3> <br>
+        <p class="font-italic text-white">Predict Sales Prices: A Machine Learning Web Application Built With FLask</p> <br>
+      </div>
+    </div> <br> <br>
+
+    <div class="container">
+      <form class="" action="{{url_for('predict')}}" method="post" style="text-align:center;">
+        <div class="form-group text-center">
+          <label class="font-weight-bold">Year Built</label>
+          <input id="first" name="year" type="number" min="1900" max="2020" class="form-control text-center" placeholder="e.g (2000)" required = "required">
+        </div>
+        <div class="form-group text-center">
+            <label class="font-weight-bold">Bedroom(s)</label>
+            <input id="second" name="bedroom" type="number" min="0" max="50" class="form-control text-center" placeholder="Input Number of Bedrooms  e.g ( 0, 1, 2, 3 e.t.c. )" required = "required" >
+          </div>
+          <div class="form-group">
+            <label class="font-weight-bold">Bathroom(s)</label>
+            <input id="third"  name="bathroom" type="number" min="0" max="50" class="form-control text-center"  placeholder="Input Number of Bathrooms e.g ( 0, 1, 2, 3 e.t.c. )" required = "required">
+          </div>
+          <div class="form-group">
+            <label class="font-weight-bold">Kitchen(s)</label>
+            <input id="third"  name="kitchen" type="number" min="0" max="50" class="form-control text-center" type="number" placeholder="Input Number of Kitchens  e.g ( 0, 1, 2, 3 e.t.c. )" required = "required">
+          </div>
+          <div class="form-group">
+            <label class="font-weight-bold">Sale Condition</label>
+            <select id="fifth" name="sale" required="required" class="form-control">
+              <option value=""></option>
+                <option value="normal">Normal</option>
+                <option value="abnormal">Abnormal</option>
+            </select>
+          </div>
+                      <br>
+        <div class="form-group">
+          <button type="submit" class="btn btn-info" name="button">Calculate The Selling Price</button>
+        </div>
+      </form>
+    </div>
+
+<br>
+<br>
+
+    <footer class="page-footer font-small">
+
+      <!-- Footer Elements -->
+      <div class="container">
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/yinka-mustapha-yusuf-1b607419b" class="btn-floating btn-li mx-1" target="_blank">
+              <i class="fab fa-linkedin-in  fa-2x"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/Mustaphayinka" class="btn-floating btn-dribbble mx-1" target="_blank">
+              <i class="fab fa-github  fa-2x"></i></a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+
+      </div>
+      <!-- Footer Elements -->
+    </footer>
+  </body>
+</html>
