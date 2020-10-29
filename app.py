@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, url_for, jsonify
+import requests
 import pandas as pd
 import pickle
 import numpy as np
@@ -42,10 +43,11 @@ def predict():
 
     prediction = model.predict(ex1)
     output=round(prediction[0],2)
+    output = output * 360
     if output<0:
         return render_template('result.html',prediction="Sorry You Cannot Sell This House")
     else:
-        return render_template('result.html',prediction="You Can Sell The House For ${}".format(output))
+        return render_template('result.html',prediction="You Can Sell The House For N{}".format(output))
 
 
 
