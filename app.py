@@ -3,6 +3,8 @@ import pandas as pd
 import pickle
 import numpy as np
 from sklearn.linear_model import LinearRegression
+import warnings
+warnings.filterwarnings("ignore")
 #from basis import lin_model
 
 
