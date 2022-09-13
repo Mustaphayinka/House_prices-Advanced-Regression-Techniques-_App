@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore")
 #from basis import lin_model
 
 
-
+# Creating apis
 app = Flask(__name__)
 
 
